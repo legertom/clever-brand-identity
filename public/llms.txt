@@ -1,0 +1,17 @@
+# Clever Brand Identity
+
+> Hosted source of truth for Clever-branded apps, agents, and design reviews.
+
+Use these files before creating or reviewing Clever apps:
+
+- [Brand guidelines markdown](/brand-guidelines.md): Agent-readable brand rules.
+- [Brand guidelines JSON](/brand-guidelines.json): Structured brand tokens and sections.
+- [Robot prompt](/api/instructions?format=prompt): Pasteable system/developer prompt for app-building agents.
+- [MCP endpoint](/api/mcp): Streamable HTTP MCP server with brand resources, prompts, and tools.
+- [Human docs](/docs/robot-instructions.md): Setup instructions for people and robots.
+
+Important constraints:
+
+- Use official Clever logo and font assets when shipping public work.
+- Do not reuse source-deck example photos or illustrations in public-facing communications without separate rights approval.
+- If there is a conflict between a generated app and the hosted guidelines, the hosted guidelines win.
