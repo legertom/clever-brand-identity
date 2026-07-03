@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc --noEmit",
+    "inspect:pptx-fonts": "python3 scripts/inspect_pptx_fonts.py",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

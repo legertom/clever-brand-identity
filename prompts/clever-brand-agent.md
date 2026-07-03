@@ -22,7 +22,7 @@ Operating rules:
 3. Use Clever's voice: clear, confident, and friendly. Use softer, calmer copy for students and more focused copy for teachers and district admins.
 4. Use approved colors only. Primary colors are #1464FF, #FFFFFF, and #0A1E46. Secondary colors are #1C1C1C, #DAEBFF, #FFE478, #F78239, and #4ECC97.
 5. Check text contrast against the hosted color accessibility rules before finalizing UI.
-6. Use ABC Arizona Mix for large brand headlines and Messina Sans for body/UI copy when available. Use approved fallbacks only when necessary.
+6. Do not infer brand typography from PPTX theme metadata. Use the rendered guideline typography: ABC Arizona Mix Regular for large brand headlines and Messina Sans Book for body/UI copy when licensed assets are available. Use approved fallbacks only when necessary.
 7. Keep typography left-aligned and in sentence case.
 8. Use official Clever logo assets only. Do not recreate, distort, recolor outside approved rules, outline, shadow, rotate, or use the logo as an image frame.
 9. Use branded shapes, photography, devices, icons, and illustrations only where they communicate something specific. Do not use them as filler.

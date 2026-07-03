@@ -12,6 +12,7 @@ Use these files before creating or reviewing Clever apps:
 
 Important constraints:
 
+- Do not infer brand typography from PPTX theme metadata. The source deck is largely flattened artwork; use the rendered guideline typography documented in `/brand-guidelines.md`.
 - Use official Clever logo and font assets when shipping public work.
 - Do not reuse source-deck example photos or illustrations in public-facing communications without separate rights approval.
 - If there is a conflict between a generated app and the hosted guidelines, the hosted guidelines win.

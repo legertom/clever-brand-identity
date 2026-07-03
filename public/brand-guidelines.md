@@ -16,6 +16,21 @@ Summarized from the readable rules in the supplied Clever brand guideline deck. 
 - Vision: To advance education with technology that works for students everywhere.
 - Narrative pillars: Connect anything, Secure everything, Choose freely, Access for all
 
+## Font Evidence And Usage
+
+The source PPTX is largely flattened slide artwork. Live OOXML font metadata is not the same thing as the normative brand typography guidance.
+
+PPTX metadata:
+- Theme major Latin: Arial
+- Theme minor Latin: Arial
+- Live XML typefaces: The editable XML contains mostly Proxima Nova, Proxima Nova Semibold, Inter, Arial, and Merriweather, primarily in footers, slide chrome, theme data, and other live PowerPoint metadata.
+
+Normative brand typography from the rendered guideline slides:
+- Headings: ABC Arizona Mix Regular, Dinamo. Headings only, especially large headline moments.
+- Body: Messina Sans Book, Luzi Type Foundry. Descriptive text and body copy.
+- Logo construction: Euclid Circular B. Used to create the Clever logotype. Use official logo assets; do not recreate the logo from type.
+- Fallback pairs: Merriweather + Inter; PT Serif + Manrope; Martel + Plus Jakarta Sans
+
 ## Color Tokens
 
 Primary:
@@ -95,8 +110,10 @@ Product UI:
 
 ## Typography
 
-- Use ABC Arizona Mix Regular for headings. It is a soft serif intended for large, high-contrast headline moments.
+- Do not infer the brand app fonts from the PPTX theme metadata. The PPTX theme declares Arial, and the editable XML includes PowerPoint/editor fonts such as Proxima Nova, Proxima Nova Semibold, Inter, Arial, and Merriweather.
+- Use the visible typography guidance in the rendered brand slides as the normative source: ABC Arizona Mix Regular for headings. It is a soft serif intended for large, high-contrast headline moments.
 - Use Messina Sans Book for body copy and descriptive text.
+- The Clever logotype was created with Euclid Circular B, but use official logo assets instead of recreating the logo from type.
 - Typography should be left-aligned only. Never right-align or force-justify type.
 - Use sentence case. Capitalize the first word in a sentence and keep subsequent words lowercase unless a proper noun requires caps.
 - Do not change tracking in general brand typography.
@@ -154,7 +171,7 @@ Product UI:
 - Use a clear, confident, friendly voice. Adjust tone for the audience.
 - Use Clever blue #1464FF, white #FFFFFF, dark navy #0A1E46, and secondary colors with restraint.
 - Verify text contrast against the Color Accessibility section before shipping.
-- Use ABC Arizona Mix for large brand headlines when available; use Messina Sans for body and UI copy. Use approved fallbacks only when needed.
+- Use the rendered guideline typography, not PPTX theme metadata: ABC Arizona Mix Regular for headings and Messina Sans Book for body/UI copy when licensed assets are available. Use approved fallbacks only when needed.
 - Keep typography left-aligned and in sentence case.
 - Use the full Clever logotype when official assets are available. Do not recreate, distort, or recolor the logo outside approved rules.
 - Use branded shapes and photography only in approved combinations. Do not use more than two shapes.

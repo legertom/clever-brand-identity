@@ -52,6 +52,16 @@ npm run typecheck
 vercel dev
 ```
 
+## Inspect A Brand Deck
+
+Use the included inspector before changing font guidance:
+
+```bash
+python3 scripts/inspect_pptx_fonts.py "/path/to/Clever Brand Guidelines.pptx" --ocr
+```
+
+The script reports live PPTX theme/typeface metadata separately from rendered slide-art OCR. That matters because the supplied deck is largely flattened artwork: the PPTX theme declares Arial, while the rendered typography pages document the brand fonts.
+
 ## Source And Scope
 
 The content was summarized from `Clever Brand Guidelines - V7 AUG2025.pptx`, whose visible title slide says `V6 - October 2024`.

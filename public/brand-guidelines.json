@@ -22,6 +22,38 @@
     "vision": "To advance education with technology that works for students everywhere.",
     "narrativePillars": ["Connect anything", "Secure everything", "Choose freely", "Access for all"]
   },
+  "fonts": {
+    "evidence": "The source PPTX is largely flattened slide artwork. Live OOXML font metadata is not the same thing as the normative brand typography guidance.",
+    "pptxThemeFonts": {
+      "majorLatin": "Arial",
+      "minorLatin": "Arial",
+      "note": "All three PPTX theme files declare Arial for major and minor Latin fonts."
+    },
+    "livePptxTypefaces": "The editable XML contains mostly Proxima Nova, Proxima Nova Semibold, Inter, Arial, and Merriweather, primarily in footers, slide chrome, theme data, and other live PowerPoint metadata.",
+    "brandGuidelineFonts": {
+      "heading": {
+        "family": "ABC Arizona Mix",
+        "style": "Regular",
+        "foundry": "Dinamo",
+        "usage": "Headings only, especially large headline moments."
+      },
+      "body": {
+        "family": "Messina Sans",
+        "style": "Book",
+        "foundry": "Luzi Type Foundry",
+        "usage": "Descriptive text and body copy."
+      },
+      "logoConstruction": {
+        "family": "Euclid Circular B",
+        "usage": "Used to create the Clever logotype. Use official logo assets; do not recreate the logo from type."
+      },
+      "fallbacks": [
+        { "heading": "Merriweather", "body": "Inter" },
+        { "heading": "PT Serif", "body": "Manrope" },
+        { "heading": "Martel", "body": "Plus Jakarta Sans" }
+      ]
+    }
+  },
   "colors": {
     "primary": [
       { "name": "Clever blue", "hex": "#1464FF", "rgb": "20, 100, 255", "usage": "Primary corporate blue and logo color." },
@@ -77,7 +109,7 @@
     "Use a clear, confident, friendly voice. Adjust tone for the audience.",
     "Use Clever blue #1464FF, white #FFFFFF, dark navy #0A1E46, and secondary colors with restraint.",
     "Verify text contrast against the Color Accessibility section before shipping.",
-    "Use ABC Arizona Mix for large brand headlines when available; use Messina Sans for body and UI copy. Use approved fallbacks only when needed.",
+    "Use the rendered guideline typography, not PPTX theme metadata: ABC Arizona Mix Regular for headings and Messina Sans Book for body/UI copy when licensed assets are available. Use approved fallbacks only when needed.",
     "Keep typography left-aligned and in sentence case.",
     "Use the full Clever logotype when official assets are available. Do not recreate, distort, or recolor the logo outside approved rules.",
     "Use branded shapes and photography only in approved combinations. Do not use more than two shapes.",

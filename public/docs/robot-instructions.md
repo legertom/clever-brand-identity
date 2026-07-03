@@ -29,7 +29,7 @@ Before making design, copy, or UI decisions, fetch and follow:
 
 If your runtime supports MCP, connect to BASE_URL/api/mcp.
 
-Treat the hosted Clever brand guidance as the source of truth. Identify the audience first. Use a clear, confident, friendly voice. Use approved colors only, verify contrast, keep typography left-aligned and in sentence case, use official logo assets only, and do not reuse source-deck imagery unless rights are approved.
+Treat the hosted Clever brand guidance as the source of truth. Identify the audience first. Use a clear, confident, friendly voice. Use approved colors only, verify contrast, keep typography left-aligned and in sentence case, use official logo assets only, and do not reuse source-deck imagery unless rights are approved. Do not infer brand typography from PPTX theme metadata; use the rendered guideline typography documented in the hosted font evidence section.
 
 Before shipping, produce a concise brand compliance note covering audience, voice/tone, palette, contrast, typography, logo usage, imagery/icons, and unresolved asset approvals.
 ```
@@ -59,10 +59,11 @@ For clients that do not support remote MCP, fetch `llms.txt` or `brand-guideline
 ## Updating the brand rules
 
 1. Extract changes from the current Clever brand deck.
-2. Update `src/brand.ts`.
-3. Keep `brand-guidelines.md`, `brand-guidelines.json`, and `llms.txt` aligned with the source data.
-4. Run `npm run typecheck`.
-5. Deploy to Vercel.
+2. Run `python3 scripts/inspect_pptx_fonts.py /path/to/Clever\ Brand\ Guidelines.pptx --ocr` to separate live PPTX font metadata from rendered guideline font rules.
+3. Update `src/brand.ts`.
+4. Keep `public/brand-guidelines.md`, `public/brand-guidelines.json`, and `public/llms.txt` aligned with the source data.
+5. Run `npm run typecheck`.
+6. Deploy to Vercel.
 
 ## Rights note
 

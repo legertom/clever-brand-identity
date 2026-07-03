@@ -42,6 +42,40 @@ export const brandData = {
     vision: "To advance education with technology that works for students everywhere.",
     narrativePillars: ["Connect anything", "Secure everything", "Choose freely", "Access for all"]
   },
+  fonts: {
+    evidence:
+      "The source PPTX is largely flattened slide artwork. Live OOXML font metadata is not the same thing as the normative brand typography guidance.",
+    pptxThemeFonts: {
+      majorLatin: "Arial",
+      minorLatin: "Arial",
+      note: "All three PPTX theme files declare Arial for major and minor Latin fonts."
+    },
+    livePptxTypefaces:
+      "The editable XML contains mostly Proxima Nova, Proxima Nova Semibold, Inter, Arial, and Merriweather, primarily in footers, slide chrome, theme data, and other live PowerPoint metadata.",
+    brandGuidelineFonts: {
+      heading: {
+        family: "ABC Arizona Mix",
+        style: "Regular",
+        foundry: "Dinamo",
+        usage: "Headings only, especially large headline moments."
+      },
+      body: {
+        family: "Messina Sans",
+        style: "Book",
+        foundry: "Luzi Type Foundry",
+        usage: "Descriptive text and body copy."
+      },
+      logoConstruction: {
+        family: "Euclid Circular B",
+        usage: "Used to create the Clever logotype. Use official logo assets; do not recreate the logo from type."
+      },
+      fallbacks: [
+        { heading: "Merriweather", body: "Inter" },
+        { heading: "PT Serif", body: "Manrope" },
+        { heading: "Martel", body: "Plus Jakarta Sans" }
+      ]
+    }
+  },
   colors: {
     primary: [
       { name: "Clever blue", hex: "#1464FF", rgb: "20, 100, 255", usage: "Primary corporate blue and logo color." },
@@ -130,8 +164,10 @@ export const brandData = {
       key: "typography",
       title: "Typography",
       body: [
-        "Use ABC Arizona Mix Regular for headings. It is a soft serif intended for large, high-contrast headline moments.",
+        "Do not infer the brand app fonts from the PPTX theme metadata. The PPTX theme declares Arial, and the editable XML includes PowerPoint/editor fonts such as Proxima Nova, Proxima Nova Semibold, Inter, Arial, and Merriweather.",
+        "Use the visible typography guidance in the rendered brand slides as the normative source: ABC Arizona Mix Regular for headings. It is a soft serif intended for large, high-contrast headline moments.",
         "Use Messina Sans Book for body copy and descriptive text.",
+        "The Clever logotype was created with Euclid Circular B, but use official logo assets instead of recreating the logo from type.",
         "Typography should be left-aligned only. Never right-align or force-justify type.",
         "Use sentence case. Capitalize the first word in a sentence and keep subsequent words lowercase unless a proper noun requires caps.",
         "Do not change tracking in general brand typography.",
@@ -204,7 +240,7 @@ export const brandData = {
         "Use a clear, confident, friendly voice. Adjust tone for the audience.",
         "Use Clever blue #1464FF, white #FFFFFF, dark navy #0A1E46, and secondary colors with restraint.",
         "Verify text contrast against the Color Accessibility section before shipping.",
-        "Use ABC Arizona Mix for large brand headlines when available; use Messina Sans for body and UI copy. Use approved fallbacks only when needed.",
+        "Use the rendered guideline typography, not PPTX theme metadata: ABC Arizona Mix Regular for headings and Messina Sans Book for body/UI copy when licensed assets are available. Use approved fallbacks only when needed.",
         "Keep typography left-aligned and in sentence case.",
         "Use the full Clever logotype when official assets are available. Do not recreate, distort, or recolor the logo outside approved rules.",
         "Use branded shapes and photography only in approved combinations. Do not use more than two shapes.",
@@ -248,6 +284,7 @@ export function getSection(key?: string): Section[] {
 export function renderGuidelinesMarkdown(sectionKey?: string): string {
   const sections = getSection(sectionKey);
   const positioning = brandData.positioning;
+  const fonts = brandData.fonts;
   const primary = renderColorList(brandData.colors.primary);
   const secondary = renderColorList(brandData.colors.secondary);
   const productUi = renderColorList(brandData.colors.productUi);
@@ -278,6 +315,21 @@ ${brandData.source.note}
 - Company description: ${positioning.companyDescription}
 - Vision: ${positioning.vision}
 - Narrative pillars: ${positioning.narrativePillars.join(", ")}
+
+## Font Evidence And Usage
+
+${fonts.evidence}
+
+PPTX metadata:
+- Theme major Latin: ${fonts.pptxThemeFonts.majorLatin}
+- Theme minor Latin: ${fonts.pptxThemeFonts.minorLatin}
+- Live XML typefaces: ${fonts.livePptxTypefaces}
+
+Normative brand typography from the rendered guideline slides:
+- Headings: ${fonts.brandGuidelineFonts.heading.family} ${fonts.brandGuidelineFonts.heading.style}, ${fonts.brandGuidelineFonts.heading.foundry}. ${fonts.brandGuidelineFonts.heading.usage}
+- Body: ${fonts.brandGuidelineFonts.body.family} ${fonts.brandGuidelineFonts.body.style}, ${fonts.brandGuidelineFonts.body.foundry}. ${fonts.brandGuidelineFonts.body.usage}
+- Logo construction: ${fonts.brandGuidelineFonts.logoConstruction.family}. ${fonts.brandGuidelineFonts.logoConstruction.usage}
+- Fallback pairs: ${fonts.brandGuidelineFonts.fallbacks.map((pair) => `${pair.heading} + ${pair.body}`).join("; ")}
 
 ## Color Tokens
 
@@ -322,7 +374,7 @@ Operating rules:
 3. Use Clever's voice: clear, confident, and friendly. Use softer, calmer copy for students and more focused copy for teachers and district admins.
 4. Use approved colors only. Primary colors are #1464FF, #FFFFFF, and #0A1E46. Secondary colors are #1C1C1C, #DAEBFF, #FFE478, #F78239, and #4ECC97.
 5. Check text contrast against the hosted color accessibility rules before finalizing UI.
-6. Use ABC Arizona Mix for large brand headlines and Messina Sans for body/UI copy when available. Use approved fallbacks only when necessary.
+6. Do not infer brand typography from PPTX theme metadata. Use the rendered guideline typography: ABC Arizona Mix Regular for large brand headlines and Messina Sans Book for body/UI copy when licensed assets are available. Use approved fallbacks only when necessary.
 7. Keep typography left-aligned and in sentence case.
 8. Use official Clever logo assets only. Do not recreate, distort, recolor outside approved rules, outline, shadow, rotate, or use the logo as an image frame.
 9. Use branded shapes, photography, devices, icons, and illustrations only where they communicate something specific. Do not use them as filler.
@@ -349,6 +401,7 @@ Use these files before creating or reviewing Clever apps:
 
 Important constraints:
 
+- Do not infer brand typography from PPTX theme metadata. The source deck is largely flattened artwork; use the rendered guideline typography documented in /brand-guidelines.md.
 - Use official Clever logo and font assets when shipping public work.
 - Do not reuse source-deck example photos or illustrations in public-facing communications without separate rights approval.
 - If there is a conflict between a generated app and the hosted guidelines, the hosted guidelines win.
