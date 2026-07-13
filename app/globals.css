@@ -1,0 +1,39 @@
+:root {
+  --blue: #1464ff;
+  --navy: #0a1e46;
+  --light-blue: #daebff;
+  --green: #4ecc97;
+  --orange: #f78239;
+  --yellow: #ffe478;
+  --black: #1c1c1c;
+  --gray: #d3d6de;
+  --font-heading: "ABC Arizona Mix", var(--font-heading-fallback), Georgia, serif;
+  --font-body: "Messina Sans", var(--font-body-fallback), "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--black);
+  font-family: var(--font-body);
+  /* Deck type-setting: body copy leading 135% */
+  line-height: 1.35;
+}
+
+main {
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  /* Deck type-setting: headline leading 95% */
+  line-height: 0.95;
+  letter-spacing: 0;
+  text-align: left;
+}
